@@ -9,6 +9,7 @@
 
     --color-nova-text: #F8FAFC;
     --color-nova-muted: #94A3B8;
+    --color-nova-muted-dark: #4B5563;
 
     --font-sans: "Inter", system-ui, sans-serif;
     --font-mono: "JetBrains Mono", "Fira Code", monospace;
@@ -16,7 +17,6 @@
 
 @layer base {
   * {
-    @apply border-border;
     box-sizing: border-box;
   }
   
