@@ -1,17 +1,18 @@
-import { Route, Routes } from "react-router";
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
+import { Routes, Route } from "react-router";
+import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
 
 export default function App() {
   return (
-    <>
-    <Navbar />
-      <Routes>
+    <Routes>
+      <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-      </Routes>
+        <Route path="*" />
+      </Route>
 
-    <Footer />
-    </>
+      <Route element={<Layout noFooter />}>
+        <Route path="/playground" />
+      </Route>
+    </Routes>
   );
 }
