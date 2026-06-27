@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+@theme {
+    --color-nova-bg: #0D1117;
+    --color-nova-surface: #161B22;
+    --color-nova-border: #21262D;
+
+    --color-nova-blue: #3B82F6;
+
+    --color-nova-text: #F8FAFC;
+    --color-nova-muted: #94A3B8;
+
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0D1117;
+    color: #F8FAFC;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.3);
+    color: #F8FAFC;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0D1117;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #21262D;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B82F6;
+  }
+}
