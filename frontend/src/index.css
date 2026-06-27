@@ -1,32 +1,39 @@
 @import "tailwindcss";
 
 @theme {
-    --color-nova-bg: #0D1117;
-    --color-nova-surface: #161B22;
-    --color-nova-border: #21262D;
+  --color-nova-bg: #0d1117;
+  --color-nova-surface: #161b22;
+  --color-nova-border: #21262d;
 
-    --color-nova-blue: #3B82F6;
+  --color-nova-blue: #3b82f6;
+  --color-nova-blue-light: #60a5fa;
+  --color-nova-green: #22c55e;
+  --color-nova-yellow: #f59e0b;
+  --color-nova-red: #ef4444;
 
-    --color-nova-text: #F8FAFC;
-    --color-nova-muted: #94A3B8;
-    --color-nova-muted-dark: #4B5563;
+  --color-nova-text: #f8fafc;
+  --color-nova-muted: #94a3b8;
+  --color-nova-muted-dark: #4b5563;
 
-    --font-sans: "Inter", system-ui, sans-serif;
-    --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --animate-fade-in: fade-in 0.6s ease-out forwards;
+  --animate-glow: glow 3s ease-in-out infinite;
 }
 
 @layer base {
   * {
     box-sizing: border-box;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    background-color: #0D1117;
-    color: #F8FAFC;
+    background-color: #0d1117;
+    color: #f8fafc;
     font-family: "Inter", system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.6;
@@ -36,7 +43,7 @@
 
   ::selection {
     background-color: rgba(59, 130, 246, 0.3);
-    color: #F8FAFC;
+    color: #f8fafc;
   }
 
   ::-webkit-scrollbar {
@@ -45,15 +52,91 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0D1117;
+    background: #0d1117;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #21262D;
+    background: #21262d;
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #3B82F6;
+    background: #3b82f6;
+  }
+}
+
+@layer components {
+  .nova-gradient-text {
+    background: linear-gradient(135deg, #60a5fa, #3b82f6, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nova-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nova-btn-primary:hover {
+    background-color: #2563eb;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .nova-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #f8fafc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid #21262d;
+    cursor: pointer;
+  }
+
+  .nova-btn-secondary:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+    background-color: rgba(59, 130, 246, 0.08);
+    color: #60a5fa;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
   }
 }

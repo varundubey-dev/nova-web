@@ -1,6 +1,6 @@
 export const METADATA = {
   name: "NOVA",
-  version: "1.0.1",
+  version: "v1.0.1",
   author: "Varun Dubey",
   github: "https://github.com/varundubey-dev/nova",
   author_website: "https://varundubey.dev/",
