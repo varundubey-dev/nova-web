@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { Play, BookOpen, Terminal, Check, Copy } from "lucide-react";
 import { METADATA } from "@data/metadata";
 import { useState } from "react";
+import HeroEditor from "@/components/HeroEditor";
 
 export default function Home() {
   const [installCopied, setInstallCopied] = useState(false);
@@ -36,7 +37,7 @@ export default function Home() {
               </div>
 
               <h1 className="font-mono font-black text-[clamp(3.5rem,8vw,4.5rem)] leading-[1.05] tracking-tight mb-6">
-                <span className="nova-gradient-text">NOVA</span>
+                <span className="nova-gradient-text">{METADATA.name}</span>
               </h1>
 
               <p className="text-lg md:text-xl text-nova-muted leading-relaxed mb-8 max-w-md font-light">
@@ -50,7 +51,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-3 mb-10">
                 <Link to="/playground" className="nova-btn-primary">
                   <Play size={15} />
-                  Try NOVA
+                  Try{" "}{METADATA.name}
                 </Link>
                 <Link to="/docs" className="nova-btn-secondary">
                   <BookOpen size={15} />
@@ -86,15 +87,15 @@ export default function Home() {
               style={{ animationDelay: "0.2s" }}
             >
               <div className="animate-glow rounded-lg h-100">
-                {/* Editor Component will be implemented in next commit */}
+                <HeroEditor />
               </div>
             </div>
           </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <div className="w-5 h-8 rounded-full border border-nova-border flex items-start justify-center pt-1.5">
-            <div className="w-0.5 h-2 bg-nova-blue rounded-full" />
+          <div className="w-6 h-10 rounded-full border-2 border-nova-border flex items-start justify-center pt-2">
+            <div className="w-1 h-2.5 bg-nova-blue rounded-full" />
           </div>
         </div>
       </section>
