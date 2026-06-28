@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.routes.tokenize import router as tokenize_router
+from app.routes.health import router as health_router
 from app.config import settings
 
 app = FastAPI(
@@ -16,18 +18,5 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-@app.get("/")
-def root():
-    return {
-        "name": "NOVA API",
-        "status": "online",
-        "version": "1.0.0",
-    }
-
-
-@app.get("/health")
-def health():
-    return {
-        "status": "healthy",
-    }
+app.include_router(health_router)
+app.include_router(tokenize_router)
