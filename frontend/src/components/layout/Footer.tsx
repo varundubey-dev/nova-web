@@ -1,8 +1,8 @@
 import { Link } from "react-router";
 import { FaGithub } from "react-icons/fa";
 import { ExternalLink } from "lucide-react";
-import { METADATA } from "../../data/metadata";
-import { FOOTERLINKS } from "../../data/navigation";
+import { METADATA } from "@data/metadata";
+import { FOOTERLINKS } from "@data/navigation";
 
 export default function Footer() {
   return (

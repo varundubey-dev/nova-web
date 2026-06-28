@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Play, BookOpen, Terminal, Check, Copy } from "lucide-react";
-import { METADATA } from "../data/metadata";
+import { METADATA } from "@data/metadata";
 import { useState } from "react";
 
 export default function Home() {

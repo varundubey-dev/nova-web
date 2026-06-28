@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router";
 import { FaGithub } from "react-icons/fa";
 import { ChevronDown, X, Menu } from "lucide-react";
-import { NAVLINKS } from "../../data/navigation";
-import { METADATA } from "../../data/metadata";
+import { NAVLINKS } from "@data/navigation";
+import { METADATA } from "@data/metadata";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

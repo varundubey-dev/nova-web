@@ -1,4 +1,4 @@
-import {METADATA} from "./metadata"
+import {METADATA} from "@data/metadata"
 
 export const NAVLINKS = [
   {
