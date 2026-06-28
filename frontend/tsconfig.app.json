@@ -14,7 +14,8 @@
       "@utils/*": ["./src/utils/*"],
       "@data/*": ["./src/data/*"],
       "@assets/*": ["./src/assets/*"],
-      "@api/*": ["./src/api/*"]
+      "@api/*": ["./src/api/*"],
+      "@syntax/*": ["./src/syntax/*"]
     },
 
     /* Bundler mode */
