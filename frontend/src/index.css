@@ -127,6 +127,39 @@
     line-height: 1.7;
     overflow: auto;
   }
+
+  .nova-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f8fafc;
+    line-height: 1.2;
+  }
+
+  .nova-section-subtitle {
+    font-size: 1rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  .nova-surface {
+    background-color: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+  }
+
+  .nova-surface-hover {
+    background-color: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .nova-surface-hover:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.08);
+    transform: translateY(-5px);
+  }
 }
 
 @keyframes fade-in {
