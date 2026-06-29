@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { tokenize } from "@api/tokenizer";
 import { renderTokens } from "@syntax/renderTokens";
 import type { SemanticToken, Token } from "@syntax/token";
-import { METADATA } from "@/data/metadata";
-import { SNIPPETS } from "@/data/snippet";
+import { METADATA } from "@data/metadata";
+import { SNIPPETS } from "@data/snippet";
 
 export default function HeroEditor() {
   const [snippetIndex, setSnippetIndex] = useState(0);
