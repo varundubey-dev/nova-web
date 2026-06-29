@@ -6,7 +6,7 @@ import { FOOTERLINKS } from "@data/navigation";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-nova-border bg-nova-bg mt-24">
+    <footer className="border-t border-nova-border bg-nova-bg">
       <div className="max-w-300 mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>

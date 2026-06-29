@@ -2,16 +2,16 @@ import { Link } from "react-router";
 import { Play, BookOpen, Terminal, Check, Copy } from "lucide-react";
 import HeroEditor from "@/components/HeroEditor";
 import { METADATA } from "@data/metadata";
+import { useState } from "react";
 
-type HeroSectionProps = {
-  installCopied: boolean;
-  handleInstallCopy: () => Promise<void>;
-};
+export default function HeroSection() {
+  const [installCopied, setInstallCopied] = useState(false);
 
-export default function HeroSection({
-  installCopied,
-  handleInstallCopy,
-}: HeroSectionProps) {
+  const handleInstallCopy = async () => {
+    await navigator.clipboard.writeText(`pip install ${METADATA.pypi.package}`);
+    setInstallCopied(true);
+    setTimeout(() => setInstallCopied(false), 2000);
+  };
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
       <div className="absolute inset-0">

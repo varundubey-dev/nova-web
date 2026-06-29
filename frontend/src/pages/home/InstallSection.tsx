@@ -1,17 +1,10 @@
 import { METADATA } from "@data/metadata";
-import { Check, Copy, ExternalLink, Download } from "lucide-react";
+import { ExternalLink, Download } from "lucide-react";
+import CopyButton from "@components/CopyButton";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
 
-type InstallSectionProps = {
-  installCopied: boolean;
-  handleInstallCopy: () => Promise<void>;
-};
-
-export default function InstallSection({
-  installCopied,
-  handleInstallCopy,
-}: InstallSectionProps) {
+export default function InstallSection() {
   return (
     <section className="py-16 border-t border-nova-border bg-nova-surface/40">
       <div className="max-w-300 mx-auto px-6">
@@ -32,19 +25,12 @@ export default function InstallSection({
                 pip install{" "}
                 <span className="text-nova-blue">{METADATA.pypi.package}</span>
               </code>
-              <button
-                onClick={handleInstallCopy}
-                className={`md:min-w-20 flex items-center gap-1 px-2.5 py-1 rounded text-xs font-mono transition-all ${
-                  installCopied
-                    ? "bg-nova-green/20 text-nova-green"
-                    : "bg-nova-border text-nova-muted hover:text-nova-text"
-                }`}
-              >
-                {installCopied ? <Check size={11} /> : <Copy size={11} />}
-                <span className="hidden md:inline">
-                  {installCopied ? "Copied" : "Copy"}
-                </span>
-              </button>
+              <CopyButton
+                text={`pip install ${METADATA.pypi.package}`}
+                size="sm"
+                hideLabelOnMobile
+                className="md:min-w-20 justify-center"
+              />
             </div>
             <div className="flex items-center gap-3 p-3.5 bg-nova-bg border border-nova-border rounded-lg w-full max-w-md mx-auto md:max-w-none md:mx-0">
               <span className="text-nova-muted-dark font-mono text-sm">$</span>

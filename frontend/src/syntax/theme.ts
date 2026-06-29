@@ -3,7 +3,9 @@ import { TOKEN_TYPES, type TokenType } from "./token";
 const KEYWORD = "text-[#F472B6] font-semibold"; 
 const TYPE = "text-[#34D399]";                 
 const STRING = "text-[#FCD34D]";                
-const NUMBER = "text-[#A78BFA]";                
+const NUMBER = "text-[#A78BFA]";   
+const COMMENT = "text-[#6B7280] italic";  
+const ERROR = "error-token"           
 
 const FUNCTION = "text-[#FBBF24]";              
 const MODULE = "text-[#38BDF8]";                
@@ -94,6 +96,8 @@ export const TOKEN_THEME: Record<TokenType, string> = {
 
   // Special
   [TOKEN_TYPES.WHITESPACE]: "",
+  [TOKEN_TYPES.COMMENT]: COMMENT,
+  [TOKEN_TYPES.ERROR]: ERROR,
   [TOKEN_TYPES.NEWLINE]: "",
   [TOKEN_TYPES.EOF]: "",
 };

@@ -76,6 +76,8 @@ export const TOKEN_TYPES = {
 
   // Special
   WHITESPACE: "WHITESPACE",
+  COMMENT: "COMMENT",
+  ERROR: "ERROR",
   NEWLINE: "NEWLINE",
   EOF: "EOF",
 } as const;

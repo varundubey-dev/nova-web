@@ -49,11 +49,9 @@ export default function FeatureSection() {
               <div
                 className="animate-fade-in"
                 style={{ animationDelay: `${i * 0.05}s` }}
+                key={card.title}
               >
-                <div
-                  key={card.title}
-                  className="nova-surface-hover p-5 flex flex-col gap-3 cursor-pointer"
-                >
+                <div className="nova-surface-hover p-5 flex flex-col gap-3 cursor-pointer">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded bg-nova-blue/10 flex items-center justify-center shrink-0">
                       <Icon size={15} className="text-nova-blue" />

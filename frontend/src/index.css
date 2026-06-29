@@ -64,6 +64,14 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #3b82f6;
   }
+
+  .error-token {
+    color: #f87171;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #ef4444;
+    text-underline-offset: 2px;
+  }
 }
 
 @layer components {
