@@ -3,6 +3,7 @@ import { METADATA } from "@data/metadata";
 import HeroSection from "@pages/home/HeroSection";
 import InstallSection from "@pages/home/InstallSection";
 import FeatureSection from "@pages/home/FeatureSection";
+import StatsSection from "@pages/home/StatsSection";
 
 export default function Home() {
     const [installCopied, setInstallCopied] = useState(false);
@@ -17,6 +18,7 @@ export default function Home() {
     <div className="min-h-screen">
       <HeroSection installCopied={installCopied} handleInstallCopy={handleInstallCopy}/>
       <InstallSection installCopied={installCopied} handleInstallCopy={handleInstallCopy} />
+      <StatsSection />
       <FeatureSection />
     </div>
   );
