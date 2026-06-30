@@ -25,3 +25,12 @@ export interface StdLibModule {
   description: string;
   functions: StdLibFunction[];
 }
+
+export interface Example {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  code: string;
+  output: string;
+}

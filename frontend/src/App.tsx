@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router";
 import Layout from "@components/layout/Layout";
 import Home from "@pages/Home";
+import Playground from "@pages/Playground";
 import NotFound from "@pages/NotFound";
 
 export default function App() {
@@ -12,7 +13,7 @@ export default function App() {
       </Route>
 
       <Route element={<Layout noFooter />}>
-        <Route path="/playground" />
+        <Route path="/playground" element={<Playground />} />
       </Route>
     </Routes>
   );
