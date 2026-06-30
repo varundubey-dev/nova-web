@@ -19,7 +19,7 @@ export default function OutputHeader({
 
       <button
         onClick={onClear}
-        className="flex items-center gap-1 rounded px-2 py-1 text-xs text-nova-muted transition-colors hover:bg-nova-border hover:text-nova-text"
+        className="flex items-center gap-1 rounded px-2 py-1 text-xs cursor-pointer text-nova-muted transition-colors hover:bg-nova-border hover:text-nova-text"
       >
         <Trash2 className="h-3.5 w-3.5" />
         Clear

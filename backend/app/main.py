@@ -2,7 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.tokenize import router as tokenize_router
 from app.routes.health import router as health_router
+from app.routes.websocket import router as playground_router
 from app.config import settings
+from app.routes.run import router as run_router
 
 app = FastAPI(
     title="NOVA API",
@@ -20,3 +22,5 @@ app.add_middleware(
 
 app.include_router(health_router)
 app.include_router(tokenize_router)
+app.include_router(playground_router)
+app.include_router(run_router)

@@ -26,12 +26,16 @@ export default function PlaygroundHeader({
       <div className="flex items-center gap-3">
         <FileCode className="h-5 w-5 text-nova-blue" />
 
-        <div className="flex gap-3 items-baseline leading-none">
+        <div className="flex items-baseline gap-2">
           <span className="text-sm font-semibold text-nova-text">
-            {METADATA.name} Playground
+            {METADATA.name}
           </span>
 
-          <span className="hidden font-mono text-xs text-nova-muted-dark sm:block">
+          <span className="md:inline text-sm font-semibold text-nova-text">
+            Playground
+          </span>
+
+          <span className="hidden lg:block font-mono text-xs text-nova-muted-dark">
             {METADATA.version}
           </span>
         </div>
@@ -39,45 +43,45 @@ export default function PlaygroundHeader({
       <div className="flex items-center gap-2">
         <button
           onClick={onToggleSidebar}
-          className={`inline-flex cursor-pointer items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm transition-colors ${
+          className={`inline-flex h-9 items-center justify-center gap-2 rounded-lg border px-3 text-sm transition-colors cursor-pointer ${
             sidebarOpen
               ? "border-nova-blue bg-nova-blue/10 text-nova-blue"
-              : "border-nova-border bg-nova-surface text-nova-muted hover:text-nova-text"
+              : "border-nova-border text-nova-muted hover:text-nova-text"
           }`}
         >
-          <BookOpen size={14} />
-          Examples
+          <BookOpen size={16} />
+          <span className="hidden lg:inline">Examples</span>
         </button>
 
         <button
           onClick={onCopy}
-          className={`inline-flex cursor-pointer items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm transition-colors ${
+          className={`inline-flex h-9 items-center justify-center gap-2 rounded-lg border px-3 text-sm transition-colors cursor-pointer ${
             copied
               ? "border-green-500 bg-green-500/10 text-green-500"
-              : "border-nova-border bg-nova-surface text-nova-muted hover:text-nova-text"
+              : "border-nova-border text-nova-muted hover:text-nova-text"
           }`}
         >
-          {copied ? <Check size={14} /> : <Copy size={14} />}
-
-          {copied ? "Copied" : "Copy"}
+          {copied ? <Check size={16} /> : <Copy size={16} />}
+          <span className="hidden lg:inline">{copied ? "Copied" : "Copy"}</span>
         </button>
 
         <button
           onClick={onDownload}
-          className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-nova-border bg-nova-surface px-3 py-1.5 text-sm text-nova-muted transition-colors hover:text-nova-text"
+          className="hidden md:inline-flex h-9 items-center justify-center gap-2 rounded-lg border border-nova-border px-3 text-sm cursor-pointer text-nova-muted transition-colors hover:text-nova-text"
         >
-          <Download size={14} />
-          Download
+          <Download size={16} />
+          <span className="hidden xl:inline">Download</span>
         </button>
 
         <button
           onClick={onRun}
           disabled={isRunning}
-          className="inline-flex cursor-pointer items-center gap-1.5 rounded-lg bg-nova-blue px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-nova-blue/70 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex h-9 items-center justify-center gap-2 rounded-lg bg-nova-blue px-3 md:px-4 text-sm font-medium cursor-pointer text-white transition-colors hover:bg-nova-blue/80 disabled:opacity-60"
         >
-          <Play size={13} />
-
-          {isRunning ? "Running..." : "Run"}
+          <Play size={15} />
+          <span className="hidden sm:inline">
+            {isRunning ? "Running..." : "Run"}
+          </span>
         </button>
       </div>
     </header>
