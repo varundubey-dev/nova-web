@@ -1,4 +1,4 @@
-import { TOKEN_TYPES, type TokenType } from "./token";
+import { TOKEN_TYPES, type TokenType } from "@syntax/token";
 
 const KEYWORD = "text-[#F472B6] font-semibold"; 
 const TYPE = "text-[#34D399]";                 

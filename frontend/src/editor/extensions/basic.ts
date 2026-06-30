@@ -13,8 +13,8 @@ import {
   indentWithTab,
 } from "@codemirror/commands";
 
-import { highlightState } from "./highlightState";
-import { novaHighlightExtension } from "./highlighting";
+import { highlightState } from "@/editor/extensions/highlightState";
+import { novaHighlightExtension } from "@/editor/extensions/highlighting";
 
 export function basicExtensions(onRun: () => void) {
   return [

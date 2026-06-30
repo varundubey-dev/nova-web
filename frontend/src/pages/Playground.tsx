@@ -171,14 +171,7 @@ export default function Playground() {
           {/* Desktop Sidebar */}
 
           <div
-            className={`
-              hidden
-              lg:flex
-              h-full
-              overflow-hidden
-              transition-[width]
-              duration-300
-              ease-in-out
+            className={` hidden lg:flex h-full overflow-hidden transition-[width] duration-300 ease-in-out
               ${
                 sidebarOpen
                   ? "w-60 border-r border-nova-border"
@@ -196,14 +189,7 @@ export default function Playground() {
 
           <div
             onClick={() => setSidebarOpen(false)}
-            className={`
-              fixed
-              inset-0
-              z-30
-              bg-black/40
-              transition-opacity
-              duration-300
-              lg:hidden
+            className={` fixed inset-0 z-30 bg-black/40 transition-opacity duration-300 lg:hidden
               ${
                 sidebarOpen
                   ? "pointer-events-auto opacity-100"

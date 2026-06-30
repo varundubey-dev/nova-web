@@ -1,6 +1,6 @@
 import type { RunError } from "@api/run";
-import OutputHeader from "./OutputHeader";
-import Terminal from "./Terminal";
+import OutputHeader from "@components/playground/OutputHeader";
+import Terminal from "@components/playground/Terminal";
 
 interface OutputPanelProps {
   output: string;

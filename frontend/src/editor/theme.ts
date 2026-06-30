@@ -48,8 +48,6 @@ export const novaTheme = EditorView.theme({
     fontSize: "14px",
     lineHeight: "28px",
     userSelect: "none",
-
-    paddingBottom: "16px",
   },
 
   ".cm-lineNumbers": {

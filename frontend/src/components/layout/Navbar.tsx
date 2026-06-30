@@ -161,18 +161,12 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`
-    md:hidden
-    overflow-hidden
-    border-t border-nova-border
-    bg-nova-surface
-    transition-all duration-300 ease-in-out
-    ${
-      mobileOpen
-        ? "max-h-128 opacity-100"
-        : "max-h-0 opacity-0 border-transparent"
-    }
-  `}
+        className={`md:hidden overflow-hidden border-t border-nova-border bg-nova-surface transition-all duration-300 ease-in-out
+          ${
+            mobileOpen
+              ? "max-h-128 opacity-100"
+              : "max-h-0 opacity-0 border-transparent"
+          }`}
       >
         <div className="px-4 py-4 space-y-1">
           {NAVLINKS.map((link) =>

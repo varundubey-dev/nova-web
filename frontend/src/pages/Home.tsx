@@ -5,6 +5,7 @@ import StatsSection from "@components/home/StatsSection";
 import InteractiveSection from "@components/home/InteractiveSection";
 import StdLibPreviewSection from "@components/home/StdLibPreviewSection";
 import CallToActionSection from "@components/home/CallToActionSection";
+import PlaygroundPreview from "@components/home/PlaygroundPreview";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         <FeatureSection />
         <InteractiveSection />
         <StdLibPreviewSection />
-        {/* Playground Preview to be added later */}
+        <PlaygroundPreview />
         <CallToActionSection />
       </div>
     </>

@@ -1,5 +1,5 @@
-import { SEMANTIC_THEME, TOKEN_THEME } from "./theme";
-import { TOKEN_TYPES, type SemanticToken, type Token } from "./token";
+import { SEMANTIC_THEME, TOKEN_THEME } from "@syntax/theme";
+import { TOKEN_TYPES, type SemanticToken, type Token } from "@syntax/token";
 
 interface RenderResult {
   nodes: React.ReactNode[][];

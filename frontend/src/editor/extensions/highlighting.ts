@@ -2,8 +2,8 @@ import { EditorView, ViewPlugin, ViewUpdate } from "@codemirror/view";
 
 import { PlaygroundSocket } from "@api/playground";
 
-import { buildDecorations } from "./buildDecorations";
-import { setDecorations } from "./highlightState";
+import { buildDecorations } from "@/editor/extensions/buildDecorations";
+import { setDecorations } from "@/editor/extensions/highlightState";
 
 export const novaHighlightExtension = ViewPlugin.fromClass(
   class {
