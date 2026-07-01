@@ -4,13 +4,15 @@ import Home from "@pages/Home";
 import Playground from "@pages/Playground";
 import Examples from "@pages/Examples";
 import NotFound from "@pages/NotFound";
+import DownloadPage from "@pages/DownloadPage";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/examples" element={<Examples />} />       
+        <Route path="/examples" element={<Examples />} />  
+        <Route path="/download" element={<DownloadPage />} />            
         <Route path="*" element={<NotFound />}/>
       </Route>
 
