@@ -30,7 +30,7 @@ export function renderTokens(
   let remaining = visibleCharacters;
 
   for (const [index, token] of tokens.entries()) {
-    const value = token.value?.toString() ?? "";
+    const value = token.value === null ? "null" : String(token.value);
 
     if (token.type === TOKEN_TYPES.NEWLINE) {
       if (remaining <= 0) break;
@@ -39,6 +39,10 @@ export function renderTokens(
       lines.push([]);
       cursorLine++;
       cursorColumn = 1;
+      continue;
+    }
+
+    if (token.type === TOKEN_TYPES.EOF) {
       continue;
     }
 

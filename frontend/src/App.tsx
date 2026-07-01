@@ -7,17 +7,20 @@ import NotFound from "@pages/NotFound";
 import DownloadPage from "@pages/DownloadPage";
 import Overview from "@pages/language/Overview";
 import Features from "@pages/language/Features";
+import Syntax from "@pages/language/Syntax";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="/examples" element={<Examples />} />  
-        <Route path="/download" element={<DownloadPage />} /> 
-        <Route path="/language/overview" element={<Overview />} /> 
-        <Route path="/language/features" element={<Features />} /> 
-        <Route path="*" element={<NotFound />}/>
+        <Route path="/examples" element={<Examples />} />
+        <Route path="/download" element={<DownloadPage />} />
+        <Route path="/language/overview" element={<Overview />} />
+        <Route path="/language/features" element={<Features />} />
+        <Route path="/language/syntax" element={<Syntax />} />
+
+        <Route path="*" element={<NotFound />} />
       </Route>
 
       <Route element={<Layout noFooter />}>

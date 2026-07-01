@@ -35,7 +35,11 @@ export function buildDecorations(
       continue;
     }
 
-    const value = token.value?.toString() ?? "";
+    if (token.type === TOKEN_TYPES.EOF) {
+      continue;
+    }
+
+    const value = token.value === null ? "null" : String(token.value);
 
     let className = TOKEN_THEME[token.type];
 
