@@ -8,6 +8,7 @@ import DownloadPage from "@pages/DownloadPage";
 import Overview from "@pages/language/Overview";
 import Features from "@pages/language/Features";
 import Syntax from "@pages/language/Syntax";
+import BuiltIns from "@pages/language/BuiltIns";
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
         <Route path="/language/overview" element={<Overview />} />
         <Route path="/language/features" element={<Features />} />
         <Route path="/language/syntax" element={<Syntax />} />
-
+        <Route path="/language/builtins" element={<BuiltIns />} />
         <Route path="*" element={<NotFound />} />
       </Route>
 
