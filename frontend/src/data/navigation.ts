@@ -10,7 +10,6 @@ export const NAVLINKS = [
       { label: "Syntax", href: "/language/syntax" },
       { label: "Built-ins", href: "/language/builtins" },
       { label: "Standard Library", href: "/language/stdlib" },
-      { label: "Roadmap", href: "/language/roadmap" },
     ],
   },
   { label: "Documentation", href: "/docs" },
@@ -28,7 +27,6 @@ export const FOOTERLINKS = [
       { label: "Syntax", href: "/language/syntax" },
       { label: "Built-ins", href: "/language/builtins" },
       { label: "Standard Library", href: "/language/stdlib" },
-      { label: "Roadmap", href: "/language/roadmap" },
     ],
   },
   {

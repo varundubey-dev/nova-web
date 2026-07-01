@@ -5,6 +5,8 @@ import Playground from "@pages/Playground";
 import Examples from "@pages/Examples";
 import NotFound from "@pages/NotFound";
 import DownloadPage from "@pages/DownloadPage";
+import Overview from "@pages/language/Overview";
+import Features from "@pages/language/Features";
 
 export default function App() {
   return (
@@ -12,7 +14,9 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/examples" element={<Examples />} />  
-        <Route path="/download" element={<DownloadPage />} />            
+        <Route path="/download" element={<DownloadPage />} /> 
+        <Route path="/language/overview" element={<Overview />} /> 
+        <Route path="/language/features" element={<Features />} /> 
         <Route path="*" element={<NotFound />}/>
       </Route>
 
