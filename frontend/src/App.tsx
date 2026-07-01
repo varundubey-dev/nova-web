@@ -9,6 +9,7 @@ import Overview from "@pages/language/Overview";
 import Features from "@pages/language/Features";
 import Syntax from "@pages/language/Syntax";
 import BuiltIns from "@pages/language/BuiltIns";
+import StandardLibrary from "@pages/language/StandardLibrary";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/language/features" element={<Features />} />
         <Route path="/language/syntax" element={<Syntax />} />
         <Route path="/language/builtins" element={<BuiltIns />} />
+        <Route path="/language/stdlib" element={<StandardLibrary />} />
         <Route path="*" element={<NotFound />} />
       </Route>
 
