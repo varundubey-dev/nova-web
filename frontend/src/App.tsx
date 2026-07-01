@@ -11,6 +11,7 @@ import Syntax from "@pages/language/Syntax";
 import BuiltIns from "@pages/language/BuiltIns";
 import StandardLibrary from "@pages/language/StandardLibrary";
 import Releases from "@pages/Releases";
+import About from "@pages/About";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/examples" element={<Examples />} />
         <Route path="/download" element={<DownloadPage />} />
         <Route path="/releases" element={<Releases />} />
+        <Route path="/about" element={<About />} />
         <Route path="/language/overview" element={<Overview />} />
         <Route path="/language/features" element={<Features />} />
         <Route path="/language/syntax" element={<Syntax />} />
