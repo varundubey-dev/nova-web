@@ -34,3 +34,14 @@ export interface Example {
   code: string;
   output: string;
 }
+
+export interface Release {
+  version: string;
+  date: string;
+  tag: "major" | "minor" | "patch";
+  summary: string;
+  changes: {
+    type: "added" | "changed" | "fixed" | "removed";
+    items: string[];
+  }[];
+}
